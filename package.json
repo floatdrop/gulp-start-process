@@ -1,0 +1,26 @@
+{
+  "name": "gulp-start-process",
+  "version": "1.0.0",
+  "description": "Just start process with nice output",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/floatdrop/gulp-start-process.git"
+  },
+  "keywords": [
+    "gulp",
+    "spawn"
+  ],
+  "author": "Vsevolod Strukchinsky <floatdrop@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/floatdrop/gulp-start-process/issues"
+  },
+  "homepage": "https://github.com/floatdrop/gulp-start-process",
+  "dependencies": {
+    "gulp-util": "^3.0.1"
+  }
+}
