@@ -1,5 +1,6 @@
 var spawn = require('child_process').spawn;
 var util = require('gulp-util');
+var path = require('path');
 
 module.exports = function start(cmd, opts, cb) {
     if (typeof opts === 'function') {
@@ -9,7 +10,13 @@ module.exports = function start(cmd, opts, cb) {
 
     opts.stdio = opts.stdio || 'inherit';
 
-    util.log('$ ' + util.colors.magenta(cmd));
+    var prefix = '';
+
+    if (opts.cwd) {
+        prefix = util.colors.gray(path.relative(process.cwd(), opts.cwd)) + ' ';
+    }
+
+    util.log(prefix + '$ ' + util.colors.magenta(cmd));
 
     return spawn('sh', ['-c', cmd], opts)
         .on('close', function (code) {
