@@ -1,4 +1,4 @@
-# gulp-start-process
+# gulp-start-process [![NPM version][npm-image]][npm-url]
 
 > Spawn process with `stdio: "inherit"`
 
@@ -22,3 +22,6 @@ Which will give you:
 ## License
 
 MIT © [Vsevolod Strukchinsky](floatdrop@gmail.com)
+
+[npm-url]: https://npmjs.org/package/gulp-start-process
+[npm-image]: http://img.shields.io/npm/v/gulp-start-process.svg?style=flat
