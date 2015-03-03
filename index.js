@@ -18,7 +18,15 @@ module.exports = function start(cmd, opts, cb) {
 
     util.log(prefix + '$ ' + util.colors.magenta(cmd));
 
-    return spawn('sh', ['-c', cmd], opts)
+    var shell = /^win/.test(process.platform) ? {
+        cmd: 'cmd.exe',
+        option: '/C'
+    } : {
+        cmd: 'sh',
+        option: '-c'
+    };
+
+    return spawn(shell.cmd, [shell.option, cmd], opts)
         .on('close', function (code) {
             if (code === 0) { return cb(); }
 
